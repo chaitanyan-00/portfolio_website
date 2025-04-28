@@ -3,228 +3,466 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chaitanya N | Cybersecurity Portfolio</title>
+  <title>Chaitanya N | Cybersecurity Enthusiast</title>
+  <meta name="description" content="Computer Science student specializing in cybersecurity, penetration testing, and web security">
+  <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, portfolio, web security">
+  <meta name="author" content="Chaitanya N">
+  <meta name="theme-color" content="#0a192f">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- Loading Animation -->
-  <div id="loading">
-    <div class="loader"></div>
-  </div>
+  <!-- Background Elements -->
+  <div id="particles-js" aria-hidden="true"></div>
+  <div id="matrix-bg" aria-hidden="true"></div>
 
-  <!-- Animated Background -->
-  <div id="particles-js"></div>
-
-  <!-- Navigation Bar -->
-  <nav>
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
     <div class="nav-container">
-      <div class="logo">
-        <img src="assets/logo-dark.png" alt="Logo" id="logo">
-      </div>
       <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-          <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-          <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-          <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-        <div id="clock" class="clock"></div>
-        <button id="mode-toggle">Light Mode</button>
+        <div id="clock" aria-live="polite"></div>
+        <button id="mode-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
       </div>
+      <ul class="nav-links">
+        <li><a href="#hero" aria-current="page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section id="hero">
-      <div class="container">
-        <img src="assets/profile.jpg" alt="Chaitanya N" class="profile-img">
-        <h1>Chaitanya N</h1>
-        <h2>Cybersecurity Enthusiast & Problem Solver</h2>
-        <p class="tagline"></p>
-        <a href="resume.pdf" class="cta-btn"><i class="fas fa-download"></i> Download Resume</a>
-        <div id="terminal">
-          > <input type="text" id="terminal-input" placeholder="Type 'help' for commands" autofocus />
+  <!-- Hero Section -->
+  <section id="hero" class="section" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="glow-text" id="hero-heading">Chaitanya N</h1>
+          <h2>Cybersecurity Enthusiast</h2>
+          <p class="tagline">Ethical Hacker | Penetration Tester</p>
+          <div class="cta-buttons">
+            <a href="resume.pdf" class="cta-btn" download="Chaitanya_N_Resume" aria-label="Download resume">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#projects" class="cta-btn secondary" aria-label="View projects">
+              <i class="fas fa-code"></i> View Projects
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- About Me -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2><i class="fas fa-user"></i> About Me</h2>
-        <p>I am a Computer Science student focused on cybersecurity. Looking for an entry-level role where I can apply my knowledge, grow my skills, and learn more about protecting systems from cyber threats. My goal is to contribute to cybersecurity efforts while continuously learning and developing in this fast-evolving field.</p>
-        <h3><i class="fas fa-graduation-cap"></i> Academic Background</h3>
-        <ul>
-          <li>B.Sc.(Hons) Computer Science (2022 - 2026),<br> RV University,<br> Bengaluru</li>
-          <li>Class 12 (PUC - Science) (2019-2022),<br> New Baldwin International School,<br> Bengaluru</li>
-        </ul>
-        <h3><i class="fas fa-briefcase"></i> Internship</h3>
-        <p>Cybersecurity Training (June 2024 - July 2024),<br> RV University</p>
-        <div id="dynamic-content">
-          <p>Loading dynamic content...</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills & Tools -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2><i class="fas fa-cogs"></i> Skills & Tools</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <i class="fas fa-shield-alt spin"></i>
-            <h3>Penetration Testing</h3>
-            <div class="skill-bar" data-width="90%"></div>
-            <p>Kali Linux, Metasploit</p>
-          </div>
-          <div class="skill-category">
-            <i class="fas fa-lock"></i>
-            <h3>Web Security</h3>
-            <div class="skill-bar" data-width="85%"></div>
-            <p>Burp Suite, OWASP ZAP</p>
-          </div>
-          <div class="skill-category">
-            <i class="fas fa-code"></i>
-            <h3>Programming</h3>
-            <div class="skill-bar" data-width="80%"></div>
-            <p>Python, Bash, JavaScript</p>
-          </div>
-          <div class="skill-category">
-            <i class="fas fa-network-wired"></i>
-            <h3>Networking & Protocols</h3>
-            <div class="skill-bar" data-width="75%"></div>
-            <p>Wireshark, Nmap</p>
+        <div class="profile-hexagon">
+          <div class="hexagon-mask">
+            <img src="assets/profile.jpg" alt="Chaitanya N - Cybersecurity Professional" loading="lazy">
+            <div class="hexagon-overlay"></div>
+            <div class="holographic-scan"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects & Case Studies -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2><i class="fas fa-project-diagram"></i> Projects & Case Studies</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <i class="fas fa-file-alt"></i>
-            <h3>Vulnerability Reports</h3>
-            <p>Documented security flaws in practice labs like TryHackMe and Hack The Box.</p>
+  <!-- About Section -->
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading"><i class="fas fa-user-secret" aria-hidden="true"></i> About Me</h2>
+      <div class="about-single-column">
+        <p>I am Computer Science student focused on cybersecurity. Seeking an entry-level role to apply my knowledge, develop my skills, and gain hands-on experience in protecting systems from cyber threats. Eager to contribute to a dynamic team while continuously learning and growing toward becoming a skilled cybersecurity professional.</p>
+        
+        <div class="about-subsection glow-card">
+          <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+          <div class="education-grid">
+            <div class="education-card glow-card">
+              <div class="education-date">2019 - 2022</div>
+              <div class="education-content">
+                <h4>10th, 11th and 12th</h4>
+                <p class="institution">New Baldwin International School and College</p>
+                <p class="location">Bangalore</p>
+                <div class="education-decoration"></div>
+              </div>
+            </div>
+            <div class="education-card glow-card">
+              <div class="education-date">2022 - 2026</div>
+              <div class="education-content">
+                <h4>BSc.(Hons) Computer Science</h4>
+                <p class="institution">RV University</p>
+                <p class="location">Mysore Road, Bangalore</p>
+                <p class="details">Currently in 3rd year, 6th sem | CGPA: 8.56</p>
+                <div class="education-decoration"></div>
+              </div>
+            </div>
           </div>
-          <div class="project-card">
-            <i class="fas fa-flag"></i>
-            <h3>CTF Write-ups</h3>
-            <p>Detailed explanations of Capture the Flag challenges.</p>
-          </div>
-          <div class="project-card">
-            <i class="fas fa-tools"></i>
-            <h3>Personal Projects</h3>
-            <p>Tools, scripts, and security automations like a password cracker or log analyzer.</p>
-          </div>
-          <div class="project-card">
-            <i class="fas fa-blog"></i>
-            <h3>Blog/Articles</h3>
-            <p>Breakdowns of real-world attacks or security concepts.</p>
+        </div>
+        
+        <div class="about-subsection glow-card">
+          <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Background</h3>
+          <div class="skills-grid">
+            <div class="skill-category glow-card">
+              <div class="skill-header">
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <h4>Programming</h4>
+              </div>
+              <div class="skill-chips">
+                <span class="skill-chip">Python</span>
+                <span class="skill-chip">Java</span>
+                <span class="skill-chip">C</span>
+                <span class="skill-chip">JavaScript</span>
+              </div>
+            </div>
+            <div class="skill-category glow-card">
+              <div class="skill-header">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <h4>Cybersecurity</h4>
+              </div>
+              <div class="skill-chips">
+                <span class="skill-chip">Ethical Hacking</span>
+                <span class="skill-chip">Penetration Testing</span>
+                <span class="skill-chip">Web App Security</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Certifications -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <h2><i class="fas fa-certificate"></i> Certifications</h2>
-        <ul>
-          <li><i class="fas fa-certificate"></i> CompTIA Security+ (Planned)</li>
-          <li><i class="fas fa-certificate"></i> OSCP (Planned)</li>
-          <li><i class="fas fa-graduation-cap"></i> Completed courses on Udemy, Cybrary, and HTB Academy.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact Me -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-        <form action="#" method="POST" class="contact-form">
-          <div class="form-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="name" placeholder="Your Name" required>
+  <!-- Skills Section -->
+  <section id="skills" class="section" aria-labelledby="skills-heading">
+    <div class="container">
+      <h2 id="skills-heading"><i class="fas fa-shield-alt" aria-hidden="true"></i> Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-category glow-card">
+          <div class="skill-header">
+            <i class="fas fa-terminal" aria-hidden="true"></i>
+            <h3>Programming Languages:</h3>
           </div>
-          <div class="form-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Your Email" required>
+          <ul>
+            <li>C</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-category glow-card">
+          <div class="skill-header">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+            <h3>Web Development</h3>
           </div>
-          <div class="form-group">
-            <i class="fas fa-comment"></i>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+          <div class="subcategory">
+            <h4>Frontend:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
           </div>
-          <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-        </form>
-        <div class="social-links">
-          <a href="https://github.com/chaitanyan-00" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-          <a href="http://www.linkedin.com/in/chaitanya-n-908152348" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="https://tryhackme.com/p/chaitanyan012518" target="_blank"><i class="fas fa-flag"></i> TryHackMe</a>
+          <div class="subcategory">
+            <h4>Backend:</h4>
+            <ul>
+              <li>Python (Flask/Django)</li>
+              <li>Node.js (Express.js)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill-category glow-card">
+          <div class="skill-header">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            <h3>Machine Learning</h3>
+          </div>
+          <ul>
+            <li>Data collection & preparation</li>
+            <li>Model development</li>
+            <li>Training & evaluation</li>
+          </ul>
+        </div>
+        <div class="skill-category glow-card">
+          <div class="skill-header">
+            <i class="fas fa-code" aria-hidden="true"></i>
+            <h3>Cloud Computing: </h3>
+          </div>
+          <ul>
+            <li>Amazon S3, SageMaker, CodePipeline, Elastic Beanstalk, CI/CD</li>
+          </ul>
+        </div>
+        <div class="skill-category glow-card">
+          <div class="skill-header">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <h3>Cybersecurity</h3>
+          </div>
+          <div class="subcategory">
+            <h4>Penetration Testing:</h4>
+            <ul>
+              <li>Nmap (Information Gathering)</li>
+              <li>Nessus (Vulnerability Assessment)</li>
+              <li>Metasploit (Exploitation)</li>
+              <li>Burp Suite</li>
+            </ul>
+          </div>
+          <div class="subcategory">
+            <h4>Web App Security:</h4>
+            <ul>
+              <li>OWASP ZAP</li>
+              <li>Testing for common vulnerabilities</li>
+              <li>Secure coding practices</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Cybersecurity Challenges -->
-    <section id="challenges" class="section">
-      <div class="container">
-        <h2><i class="fas fa-flag"></i> Cybersecurity Challenges</h2>
-        <div class="challenge">
-          <h3>Decode the Message</h3>
-          <p>Decode this Base64 message: <code>VGhpcyBpcyBhIHRlc3Q=</code></p>
-          <input type="text" id="challenge-input" placeholder="Your answer">
-          <button id="submit-challenge">Submit</button>
-          <p id="challenge-result"></p>
+  <!-- Internship Section -->
+  <section id="internship" class="section" aria-labelledby="internship-heading">
+    <div class="container">
+      <h2 id="internship-heading"><i class="fas fa-briefcase" aria-hidden="true"></i> Internship</h2>
+      
+      <div class="internship-card glow-card">
+        <div class="internship-header">
+          <div class="internship-logo">
+            <i class="fas fa-university" aria-hidden="true"></i>
+          </div>
+          <div class="internship-title">
+            <h3>Cybersecurity Training Intern</h3>
+            <div class="internship-meta">
+              <span>RV University</span>
+              <span>June 2024 - July 2024</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="internship-details">
+          <h4>Training Focus Areas:</h4>
+          <ul class="cyber-skills">
+            <li><i class="fas fa-shield-alt" aria-hidden="true"></i> Training in Cybersecurity</li>
+            <li><i class="fas fa-network-wired" aria-hidden="true"></i> Building basic skills in cybersecurity</li>
+          </ul>
+          
+          <div class="achievements">
+            <h4>Key Outcomes:</h4>
+            <div class="achievement-grid">
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <i class="fas fa-certificate" aria-hidden="true"></i>
+                </div>
+                <p>Completed 120+ hours of training</p>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <i class="fas fa-flask" aria-hidden="true"></i>
+                </div>
+                <p>Conducted CTF tests</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Password Strength Checker -->
-    <section id="password-checker" class="section">
-      <div class="container">
-        <h2><i class="fas fa-lock"></i> Password Strength Checker</h2>
-        <br>
-        <input type="text" id="password-input" placeholder="Enter a password">
-        <div id="password-strength"></div>
-      </div>
-    </section>
+  <!-- Projects Section -->
+  <section id="projects" class="section" aria-labelledby="projects-heading">
+    <div class="container">
+      <h2 id="projects-heading"><i class="fas fa-project-diagram" aria-hidden="true"></i> Projects</h2>
+      <div class="projects-grid">
+          <div class="project-card glow-card">
+            <div class="project-header">
+              <i class="fas fa-laptop-code" aria-hidden="true"></i>
+              <h3>Portfolio Website</h3>
+            </div>
+            <div class="project-content">
+              <p>Built a professional portfolio website to showcase my work and skills in web development.</p>
+              <ul>
+                <li>Developed using HTML, CSS, and JavaScript</li>
+                <li>Implemented Python Flask and Node.js backend</li>
+                <li>Designed clean UI/UX with responsive layout</li>
+              </ul>
+            </div>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>Node.js</span>          
+            </div>
+            <a href="projects/project1.html" class="project-link" target="_blank" rel="noopener noreferrer">Veiw in Indetail</a>  
+          </div>
 
-    <!-- Resources -->
-    <section id="resources" class="section">
-      <div class="container">
-        <h2><i class="fas fa-download"></i> Resources</h2>
-        <ul>
-          <li><a href="assets/cheatsheet.pdf" download>Penetration Testing Cheat Sheet</a></li>
-          <li><a href="assets/template.docx" download>Report Template</a></li>
-        </ul>
+        <div class="project-card glow-card">
+          <div class="project-header">
+            <i class="fas fa-wine-glass-alt" aria-hidden="true"></i>
+            <h3>Wine Quality Prediction</h3>
+          </div>
+          <div class="project-content">
+            <p>Machine learning project to predict wine quality based on chemical properties.</p>
+            <ul>
+              <li>Collected and cleaned dataset of wine characteristics</li>
+              <li>Developed and trained prediction models</li>
+              <li>Analyzed results and optimized model performance</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Data Analysis</span>
+          </div>
+          <a href="projects/wine-quality.html" class="project-link" target="_blank" rel="noopener noreferrer">Veiw in Indetail</a>  
+        </div>
+        <div class="project-card glow-card">
+          <div class="project-header">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <h3>AWS Cloud Computing Labs</h3>
+          </div>
+          <div class="project-content">
+            <p>Learned how to use AWS platform </p>
+            <ul>
+              <li>Deployed a static website using Amazon S3 and integrated it with CloudFront for global access.</li>
+              <li>Trained and deployed a machine learning model on Amazon SageMaker using the Iris dataset.</li>
+              <li>Implemented a CI/CD pipeline using AWS CodePipeline, CodeBuild, and Elastic Beanstalk.</li>
+            </ul>
+            <div class="project-tech">
+              <span>Amazon S3</span>
+              <span>SageMaker</span>
+              <span>CodePipeline</span>
+              <span>Elastic Beanstalk</span>
+              <span>CI/CD</span>
+            </div>
+          </div>
+          <a href="projects/project1.html" class="project-link" target="_blank" rel="noopener noreferrer">Veiw in Indetail</a>  
+        </div>
+        <div class="project-card glow-card">
+          <div class="project-header">
+            <i class="fas fa-shield-virus" aria-hidden="true"></i>
+            <h3>Cybersecurity Labs</h3>
+          </div>
+          <div class="project-content">
+            <p>Hands-on practice with security tools and vulnerability assessment techniques.</p>
+            <ul>
+              <li>Practiced penetration testing with Kali Linux tools</li>
+              <li>Identified and exploited vulnerabilities in test environments</li>
+              <li>Documented findings and remediation strategies</li>
+            </ul>
+          </div>
+          <div class="project-tech">
+            <span>Kali Linux</span>
+            <span>Metasploit</span>
+            <span>Nmap</span>
+            <span>Burp Suite</span>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section" aria-labelledby="certifications-heading">
+    <div class="container">
+      <h2 id="certifications-heading"><i class="fas fa-certificate" aria-hidden="true"></i> Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card glow-card">
+          <div class="cert-icon">
+            <i class="fab fa-google-drive" aria-hidden="true"></i>
+          </div>
+          <h3>Google Drive</h3>
+          <a href="https://drive.google.com/drive/folders/1BkW9e55qI9TSTvzDGQVlJcTH68mEquz6?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View certifications on Google Drive">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i> View My Certifications
+          </a>
+          <div class="cert-hover-content">
+            <a href="https://drive.google.com/drive/folders/1BkW9e55qI9TSTvzDGQVlJcTH68mEquz6?usp=sharing">
+            <span>Click to view</span>
+            </a>
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card glow-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </div>
+          <h3>Email</h3>
+          <a href="mailto:chaitanyan012518@gmail.com" class="contact-link">chaitanyan012518@gmail.com</a>
+        </div>
+        
+        <div class="contact-card glow-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <a href="http://www.linkedin.com/in/chaitanya-n-908152348" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">Connect with me</a>
+        </div>
+        
+        <div class="contact-card glow-card">
+          <div class="contact-icon">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </div>
+          <h3>GitHub</h3>
+          <a href="https://github.com/chaitanyan-00" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">View my projects</a>
+        </div>
+      </div>
+      
+      <form id="contactForm" class="contact-form glow-card" aria-labelledby="contact-heading">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" aria-label="Send message">Send Message</button>
+        <div id="form-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer aria-label="Footer">
     <div class="container">
-      <p><i class="fas fa-copyright"></i> <span id="year"></span> Chaitanya N. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Chaitanya N. All rights reserved.</p>
       <div class="footer-links">
-        <a href="chaitanyan012518@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="7022544357"><i class="fas fa-phone"></i> Phone</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#accessibility" aria-label="Accessibility statement">Accessibility</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  <script src="script.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Loading Animation -->
+  <div id="loader" aria-live="polite" aria-busy="true">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <p>Initializing System...</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
