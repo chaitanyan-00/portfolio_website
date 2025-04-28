@@ -1,0 +1,123 @@
+/* Projects Page Styles - Shared by all project pages */
+:root {
+  --project-primary: #4BB4DE;
+  --project-primary-dark: #345DA7;
+  --project-terminal: #04d9ff;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: var(--project-primary);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(75, 180, 222, 0.3);
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  color: var(--project-terminal);
+  margin-bottom: 2rem;
+}
+
+.project-section {
+  margin-bottom: 3rem;
+  background: var(--darker-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--project-primary);
+}
+
+.project-section h2 {
+  color: var(--project-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.tech-chip {
+  background: rgba(75, 180, 222, 0.2);
+  color: var(--project-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tech-chip:hover {
+  background: rgba(75, 180, 222, 0.3);
+  transform: translateY(-2px);
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--project-primary);
+  color: white;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.github-btn:hover {
+  background-color: var(--project-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(75, 180, 222, 0.3);
+}
+
+.feature-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--project-primary);
+}
+
+.challenge-card {
+  background: rgba(75, 180, 222, 0.1);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1rem;
+  }
+}
