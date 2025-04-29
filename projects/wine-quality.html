@@ -36,7 +36,7 @@
 
   <!-- Project Content -->
   <main class="project-container">
-    <header class="project-header">
+    <header class="project-header glow-card">
       <h1 class="project-title">Wine Quality Prediction</h1>
       <p class="project-subtitle">Machine learning model to predict wine quality based on chemical properties</p>
       <a href="https://github.com/yourusername/wine-quality" class="github-btn" target="_blank">
@@ -44,7 +44,7 @@
       </a>
     </header>
 
-    <section class="project-section">
+    <section class="project-section glow-card">
       <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
       <p>This project involved developing a machine learning model to predict wine quality based on various chemical properties. The goal was to explore different algorithms and feature selection techniques to achieve the best prediction accuracy.</p>
       
@@ -57,7 +57,7 @@
       </div>
     </section>
 
-    <section class="project-section">
+    <section class="project-section glow-card">
       <h2><i class="fas fa-cogs"></i> Technical Implementation</h2>
       <ul class="feature-list">
         <li>Collected and cleaned dataset of wine characteristics from UCI Machine Learning Repository</li>
@@ -68,23 +68,23 @@
       </ul>
     </section>
 
-    <section class="project-section">
+    <section class="project-section glow-card">
       <h2><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
       
-      <div class="challenge-card">
+      <div class="challenge-card glow-card">
         <h3>Imbalanced Dataset</h3>
         <p>The dataset had significantly more average-quality wines than excellent or poor ones.</p>
         <p><strong>Solution:</strong> Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the classes.</p>
       </div>
       
-      <div class="challenge-card">
+      <div class="challenge-card glow-card">
         <h3>Feature Selection</h3>
         <p>Determining which chemical properties had the most impact on quality was challenging.</p>
         <p><strong>Solution:</strong> Used recursive feature elimination and correlation analysis to identify the most significant features.</p>
       </div>
     </section>
 
-    <section class="project-section">
+    <section class="project-section glow-card">
       <h2><i class="fas fa-code-branch"></i> GitHub Repository</h2>
       <p>Explore the full source code, dataset, and Jupyter notebooks:</p>
       <a href="https://github.com/yourusername/wine-quality" class="github-btn" target="_blank">
@@ -109,10 +109,5 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="../script.js"></script>
   <script src="script.js"></script>
-  
-  <!-- Initialize current year -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
