@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Labs | Chaitanya N</title>
+  <meta name="description" content="My cybersecurity training and penetration testing projects">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Background Elements -->
+  <div id="particles-js"></div>
+  <div id="matrix-bg"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-right">
+        <div id="clock"></div>
+        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">Cybersecurity Labs</h1>
+      <p class="project-subtitle">Penetration testing and ethical hacking exercises</p>
+      <a href="https://github.com/yourusername/cybersecurity-labs" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </header>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+      <p>Hands-on cybersecurity labs where I practiced penetration testing techniques using industry-standard tools in controlled environments.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-chip">Kali Linux</span>
+        <span class="tech-chip">Metasploit</span>
+        <span class="tech-chip">Nmap</span>
+        <span class="tech-chip">Burp Suite</span>
+        <span class="tech-chip">OWASP ZAP</span>
+      </div>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-cogs"></i> Key Exercises</h2>
+      <ul class="feature-list">
+        <li>Network scanning and vulnerability assessment with Nmap</li>
+        <li>Exploitation using Metasploit Framework</li>
+        <li>Web application testing with Burp Suite</li>
+        <li>Password cracking with John the Ripper</li>
+        <li>CTF (Capture The Flag) challenges</li>
+      </ul>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
+      
+      <div class="challenge-card glow-card">
+        <h3>False Positives</h3>
+        <p>Initial scans produced many false positive results.</p>
+        <p><strong>Solution:</strong> Fine-tuned scan parameters and manually verified findings.</p>
+      </div>
+      
+      <div class="challenge-card glow-card">
+        <h3>Privilege Escalation</h3>
+        <p>Difficulty in escalating privileges on hardened systems.</p>
+        <p><strong>Solution:</strong> Researched kernel exploits and misconfigurations.</p>
+      </div>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-code-branch"></i> GitHub Repository</h2>
+      <p>Explore my lab reports and documentation:</p>
+      <a href="https://github.com/yourusername/cybersecurity-labs" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View Documentation
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Chaitanya N. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="../script.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

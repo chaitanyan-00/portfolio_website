@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Cloud Labs | Chaitanya N</title>
+  <meta name="description" content="Hands-on AWS cloud computing labs">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Background Elements -->
+  <div id="particles-js"></div>
+  <div id="matrix-bg"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-right">
+        <div id="clock"></div>
+        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <main class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">AWS Cloud Labs</h1>
+      <p class="project-subtitle">Hands-on experience with AWS cloud services</p>
+      <a href="https://github.com/yourusername/aws-labs" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </header>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+      <p>Completed multiple AWS labs to gain practical experience with cloud computing services including deployment, machine learning, and CI/CD pipelines.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-chip">AWS S3</span>
+        <span class="tech-chip">AWS SageMaker</span>
+        <span class="tech-chip">AWS CodePipeline</span>
+        <span class="tech-chip">Elastic Beanstalk</span>
+        <span class="tech-chip">CI/CD</span>
+      </div>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-cogs"></i> Key Labs</h2>
+      <ul class="feature-list">
+        <li>Deployed static website using Amazon S3 and CloudFront</li>
+        <li>Trained and deployed ML model on SageMaker (Iris dataset)</li>
+        <li>Implemented CI/CD pipeline with CodePipeline and CodeBuild</li>
+        <li>Configured auto-scaling for web applications</li>
+        <li>Set up monitoring and alerts using CloudWatch</li>
+      </ul>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
+      
+      <div class="challenge-card glow-card">
+        <h3>IAM Permissions</h3>
+        <p>Setting up proper IAM roles was initially confusing.</p>
+        <p><strong>Solution:</strong> Created custom policies with least privilege access.</p>
+      </div>
+      
+      <div class="challenge-card glow-card">
+        <h3>Cost Management</h3>
+        <p>Keeping track of AWS service costs was challenging.</p>
+        <p><strong>Solution:</strong> Implemented billing alerts and used Cost Explorer.</p>
+      </div>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-code-branch"></i> GitHub Repository</h2>
+      <p>Explore the lab documentation and configuration files:</p>
+      <a href="https://github.com/yourusername/aws-labs" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View Documentation
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Chaitanya N. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="../script.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
