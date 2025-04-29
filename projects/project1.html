@@ -3,77 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website Project | Chaitanya N</title>
-  <meta name="description" content="Detailed case study of my portfolio website project">
-  
-  <!-- Same styles as index -->
+  <title>Portfolio Website | Chaitanya N</title>
+  <meta name="description" content="My interactive portfolio website project">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Project-specific styles -->
-  <style>
-    .project-hero {
-      background: linear-gradient(135deg, rgba(75, 180, 222, 0.2) 0%, rgba(52, 93, 167, 0.5) 100%);
-      padding: 4rem 1rem;
-      border-radius: 0.5rem;
-      margin-bottom: 3rem;
-    }
-    
-    .project-screenshot {
-      border: 1px solid var(--primary);
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 30px rgba(75, 180, 222, 0.3);
-      transition: transform 0.3s ease;
-    }
-    
-    .project-screenshot:hover {
-      transform: translateY(-5px);
-    }
-    
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1.5rem 0;
-    }
-    
-    .tech-chip {
-      background: rgba(75, 180, 222, 0.2);
-      color: var(--primary);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-    
-    .project-section {
-      margin-bottom: 3rem;
-    }
-    
-    .github-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #333;
-      color: white;
-      border-radius: 0.25rem;
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    
-    .github-btn:hover {
-      background-color: #444;
-      transform: translateY(-3px);
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
   <!-- Background Elements -->
   <div id="particles-js"></div>
   <div id="matrix-bg"></div>
 
-  <!-- Navigation (Same as index) -->
+  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <div class="nav-right">
@@ -88,150 +31,78 @@
     </div>
   </nav>
 
-  <!-- Project Hero Section -->
-  <section class="project-hero">
-    <div class="container">
-      <h1 class="glow-text">Portfolio Website</h1>
-      <p class="tagline">A responsive, interactive portfolio showcasing my cybersecurity and development skills</p>
+  <!-- Project Content -->
+  <main class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">Portfolio Website</h1>
+      <p class="project-subtitle">Interactive showcase of my skills and projects</p>
       <a href="https://github.com/yourusername/portfolio" class="github-btn" target="_blank">
         <i class="fab fa-github"></i> View on GitHub
       </a>
-    </div>
-  </section>
+    </header>
 
-  <!-- Project Content -->
-  <section class="container project-section">
-    <div class="grid-2-col">
-      <div>
-        <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
-        <p>This portfolio website was designed to showcase my skills in web development, cybersecurity, and cloud computing. It features a modern, interactive design with animations and responsive layouts that work across all device sizes.</p>
-        
-        <h3><i class="fas fa-bullseye"></i> Objectives</h3>
-        <ul>
-          <li>Create a professional online presence</li>
-          <li>Demonstrate front-end development skills</li>
-          <li>Showcase cybersecurity projects and certifications</li>
-          <li>Implement secure contact form functionality</li>
-        </ul>
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+      <p>A responsive portfolio website built to showcase my technical skills and projects with interactive elements and smooth animations.</p>
+      
+      <div class="tech-stack">
+        <span class="tech-chip">HTML5</span>
+        <span class="tech-chip">CSS3</span>
+        <span class="tech-chip">JavaScript</span>
+        <span class="tech-chip">Particles.js</span>
+      </div>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-cogs"></i> Technical Implementation</h2>
+      <ul class="feature-list">
+        <li>Implemented dark/light mode toggle with localStorage persistence</li>
+        <li>Created interactive particle.js background</li>
+        <li>Developed responsive layout with CSS Grid and Flexbox</li>
+        <li>Added scroll-triggered animations using Intersection Observer</li>
+        <li>Optimized performance with lazy loading and reduced motion support</li>
+      </ul>
+    </section>
+
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
+      
+      <div class="challenge-card glow-card">
+        <h3>Performance Optimization</h3>
+        <p>Initial animations caused performance issues on mobile devices.</p>
+        <p><strong>Solution:</strong> Implemented reduced motion detection and simplified animations.</p>
       </div>
       
-      <div>
-        <img src="../assets/project1.jpg" alt="Portfolio website screenshot" class="project-screenshot">
+      <div class="challenge-card glow-card">
+        <h3>Theme Consistency</h3>
+        <p>Maintaining consistent colors across all components.</p>
+        <p><strong>Solution:</strong> Used CSS variables for theming and thorough testing.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container project-section">
-    <h2><i class="fas fa-code"></i> Technical Implementation</h2>
-    
-    <div class="tech-stack">
-      <span class="tech-chip">HTML5</span>
-      <span class="tech-chip">CSS3</span>
-      <span class="tech-chip">JavaScript</span>
-      <span class="tech-chip">Particles.js</span>
-      <span class="tech-chip">Responsive Design</span>
-    </div>
-    
-    <h3><i class="fas fa-cogs"></i> Key Features</h3>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <i class="fas fa-palette"></i>
-        <h4>Dark/Light Mode</h4>
-        <p>Implemented a theme toggle that persists user preference using localStorage.</p>
-      </div>
-      
-      <div class="feature-card">
-        <i class="fas fa-mobile-alt"></i>
-        <h4>Responsive Design</h4>
-        <p>Fully responsive layout that adapts to all screen sizes with mobile-first approach.</p>
-      </div>
-      
-      <div class="feature-card">
-        <i class="fas fa-shield-alt"></i>
-        <h4>Security Features</h4>
-        <p>Secure contact form with validation and error handling to prevent XSS attacks.</p>
-      </div>
-    </div>
-  </section>
+    <section class="project-section glow-card">
+      <h2><i class="fas fa-code-branch"></i> GitHub Repository</h2>
+      <p>Explore the full source code and documentation:</p>
+      <a href="https://github.com/yourusername/portfolio" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View Source Code
+      </a>
+    </section>
+  </main>
 
-  <section class="container project-section">
-    <h2><i class="fas fa-chart-line"></i> Challenges & Solutions</h2>
-    
-    <div class="challenge-card">
-      <h3>Performance Optimization</h3>
-      <p>Initial load times were slow due to heavy animations and large assets.</p>
-      <p><strong>Solution:</strong> Implemented lazy loading for images, optimized animations with prefers-reduced-motion, and minified assets.</p>
-    </div>
-    
-    <div class="challenge-card">
-      <h3>Cross-Browser Compatibility</h3>
-      <p>CSS Grid and some JavaScript features weren't consistent across browsers.</p>
-      <p><strong>Solution:</strong> Added appropriate fallbacks and used feature detection with Modernizr.</p>
-    </div>
-  </section>
-
-  <section class="container project-section">
-    <h2><i class="fas fa-code-branch"></i> GitHub Repository</h2>
-    <p>Explore the full source code and contribute to the project:</p>
-    <a href="https://github.com/yourusername/portfolio" class="github-btn" target="_blank">
-      <i class="fab fa-github"></i> View Source Code
-    </a>
-    
-    <h3>Installation</h3>
-    <pre><code>git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-npm install
-npm run dev</code></pre>
-  </section>
-
-  <!-- Same footer as index -->
   <footer>
     <div class="container">
       <p>&copy; <span id="year"></span> Chaitanya N. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
   <button id="backToTop" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Same scripts as index -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="../script.js"></script>
-  
-  <!-- Project-specific scripts -->
+  <script src="script.js"></script>
   <script>
-    // Initialize project-specific animations
-    document.addEventListener('DOMContentLoaded', function() {
-      // Animate feature cards on scroll
-      const featureCards = document.querySelectorAll('.feature-card');
-      featureCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.1}s`;
-        card.classList.add('animate-on-scroll');
-      });
-      
-      // Initialize scroll animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      document.querySelectorAll('.animate-on-scroll').forEach(el => {
-        observer.observe(el);
-      });
-      
-      // Add interactive screenshot viewer
-      const screenshot = document.querySelector('.project-screenshot');
-      if (screenshot) {
-        screenshot.addEventListener('click', function() {
-          this.classList.toggle('zoom');
-        });
-      }
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
